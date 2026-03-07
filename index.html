@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Weinmann — Product Leader & Venture Builder</title>
+    <meta name="description" content="Product Leader & Venture Builder. 10+ years building digital products from 0→1. Fractional CPO, AI product strategy, and meaningful technology.">
+    <meta name="keywords" content="Julian Weinmann, Product Leader, Fractional CPO, Venture Builder, AI Product Strategy, Berlin">
+    <meta property="og:title" content="Julian Weinmann — Product Leader & Venture Builder">
+    <meta property="og:description" content="10+ years building digital products from 0→1. Fractional CPO, AI product strategy, and meaningful technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://julianweinmann.xyz">
+    <link rel="canonical" href="https://julianweinmann.xyz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           CSS VARIABLES — edit these to customize
+           ============================================ */
+        :root {
+            --color-bg: #FAFAF8;
+            --color-bg-alt: #F3F2EE;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5A5A58;
+            --color-text-muted: #8A8A86;
+            --color-accent: #B8926A;
+            --color-accent-hover: #A07D58;
+            --color-border: #E5E4E0;
+            --color-card-bg: #FFFFFF;
+            --color-dark-bg: #1A1A1A;
+            --color-dark-text: #FAFAF8;
+            --color-dark-text-secondary: #B0B0AC;
+
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 3rem;
+            --space-xl: 5rem;
+            --space-2xl: 8rem;
+
+            --max-width: 1200px;
+            --max-width-narrow: 800px;
+            --border-radius: 8px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4 {
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            letter-spacing: -0.03em;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-lg);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .serif {
+            font-family: var(--font-serif);
+        }
+
+        .text-secondary {
+            color: var(--color-text-secondary);
+        }
+
+        .text-muted {
+            color: var(--color-text-muted);
+        }
+
+        .text-accent {
+            color: var(--color-accent);
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .container--narrow {
+            max-width: var(--max-width-narrow);
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-sm) 0;
+            background: rgba(250, 250, 248, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: border-color var(--transition);
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--color-border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            transition: color var(--transition);
+            font-weight: 400;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-text);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-text);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 6rem;
+            padding-bottom: var(--space-xl);
+        }
+
+        .hero-content {
+            max-width: 860px;
+        }
+
+        .hero-label {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero h1 {
+            margin-bottom: var(--space-md);
+        }
+
+        .hero h1 .serif {
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            color: var(--color-text-secondary);
+            max-width: 640px;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            font-family: var(--font-sans);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all var(--transition);
+            border: none;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary {
+            background: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--color-text);
+            transform: translateY(-1px);
+        }
+
+        .btn-arrow::after {
+            content: '→';
+            transition: transform var(--transition);
+        }
+
+        .btn-arrow:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* ============================================
+           CREDIBILITY STRIP
+           ============================================ */
+        .credibility {
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .credibility-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .credibility-item {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .credibility-divider {
+            width: 4px;
+            height: 4px;
+            background: var(--color-border);
+            border-radius: 50%;
+        }
+
+        /* ============================================
+           ABOUT
+           ============================================ */
+        .about {
+            background: var(--color-bg);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+
+        .about-label {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .about-text {
+            font-size: 1.0625rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        .about-text p + p {
+            margin-top: var(--space-sm);
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .highlight-item {
+            padding: var(--space-md);
+            background: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+        }
+
+        .highlight-number {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: -0.03em;
+            color: var(--color-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-label {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        /* ============================================
+           SERVICES
+           ============================================ */
+        .services {
+            background: var(--color-bg-alt);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .service-card {
+            padding: var(--space-lg) var(--space-md);
+            background: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+            transition: all var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        .service-number {
+            font-size: 0.75rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+            letter-spacing: 0.08em;
+        }
+
+        .service-card h3 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .service-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           SELECTED WORK
+           ============================================ */
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        .work-card {
+            padding: var(--space-lg) var(--space-md);
+            background: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        .work-card-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-xs);
+        }
+
+        .work-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-xs);
+            font-weight: 400;
+        }
+
+        .work-card-role {
+            font-size: 0.875rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .work-card p {
+            font-size: 0.9375rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .work-card-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: var(--space-sm);
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--color-bg-alt);
+            border-radius: 100px;
+            color: var(--color-text-secondary);
+        }
+
+        /* ============================================
+           SOUND & MUSIC
+           ============================================ */
+        .sound {
+            background: var(--color-dark-bg);
+            color: var(--color-dark-text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sound::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(184, 146, 106, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .sound .container {
+            position: relative;
+        }
+
+        .sound h2 {
+            color: var(--color-dark-text);
+        }
+
+        .sound-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .sound-text {
+            font-size: 1.0625rem;
+            color: var(--color-dark-text-secondary);
+            line-height: 1.8;
+        }
+
+        .sound-text p + p {
+            margin-top: var(--space-sm);
+        }
+
+        .sound-visual {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .sound-item {
+            padding: var(--space-md);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--border-radius);
+            transition: all var(--transition);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .sound-item:hover {
+            border-color: rgba(184, 146, 106, 0.3);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .sound-item h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+            color: var(--color-dark-text);
+        }
+
+        .sound-item p {
+            font-size: 0.875rem;
+            color: var(--color-dark-text-secondary);
+        }
+
+        /* ============================================
+           HOW I WORK
+           ============================================ */
+        .process {
+            background: var(--color-bg);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+        }
+
+        .process-step {
+            text-align: center;
+            padding: var(--space-md);
+        }
+
+        .process-step-number {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .process-step h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           CTA
+           ============================================ */
+        .cta {
+            background: var(--color-bg-alt);
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .cta-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-text {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-links a {
+            font-size: 0.8125rem;
+            color: var(--color-text-muted);
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-text);
+        }
+
+        /* ============================================
+           SECTION HEADER UTILITY
+           ============================================ */
+        .section-header {
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-label {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .section-description {
+            font-size: 1.0625rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 900px) {
+            .about-grid,
+            .sound-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: var(--space-lg) 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(250, 250, 248, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: var(--space-md);
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 8rem;
+                padding-bottom: var(--space-lg);
+            }
+
+            .credibility-items {
+                gap: var(--space-sm);
+            }
+
+            .credibility-divider {
+                display: none;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer .container {
+                flex-direction: column;
+                gap: var(--space-sm);
+                text-align: center;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .hero-cta-group .btn {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">Julian Weinmann</a>
+            <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#sound">Sound</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-label">Product Leader &amp; Venture Builder</p>
+                <h1>
+                    Building products that<br>
+                    <span class="serif">matter</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I help startups and ventures go from zero to one. 10+ years of building digital products across AI, SaaS, marketplaces, and meaningful technology — with strategic clarity and hands-on execution.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#contact" class="btn btn-primary btn-arrow">Work with me</a>
+                    <a href="#work" class="btn btn-secondary">View selected work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CREDIBILITY STRIP
+         ============================================ -->
+    <div class="credibility">
+        <div class="container">
+            <div class="credibility-items">
+                <span class="credibility-item">BCG Digital Ventures</span>
+                <span class="credibility-divider"></span>
+                <span class="credibility-item">Rocket Internet</span>
+                <span class="credibility-divider"></span>
+                <span class="credibility-item">10+ Ventures Built</span>
+                <span class="credibility-divider"></span>
+                <span class="credibility-item">4 Continents</span>
+                <span class="credibility-divider"></span>
+                <span class="credibility-item">Berlin</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ABOUT
+         ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid fade-in">
+                <div>
+                    <p class="about-label">About</p>
+                    <h2>Strategy meets<br><span class="serif">execution</span></h2>
+                    <div class="about-text">
+                        <p>
+                            I'm a product leader and venture builder with over a decade of experience taking ideas from napkin sketch to product-market fit. My background spans BCG Digital Ventures, Rocket Internet, and a range of early-stage to growth-stage companies — always at the intersection of product strategy, technology, and real user impact.
+                        </p>
+                        <p>
+                            I work best in the messy early phases: shaping product vision, running discovery, building lean MVPs, and setting up the teams and systems to scale. Increasingly, I focus on AI-enabled products and technology that supports wellbeing, human development, and conscious living.
+                        </p>
+                        <p>
+                            I bring strategic clarity without losing the craft. I ship fast, think in systems, and care deeply about building things that are not just useful — but meaningful.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">10+</div>
+                            <div class="highlight-label">Years in product</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">10+</div>
+                            <div class="highlight-label">Ventures built</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">0→1</div>
+                            <div class="highlight-label">Specialist</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">AI</div>
+                            <div class="highlight-label">Product strategy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES
+         ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">What I Offer</p>
+                <h2>From strategy <span class="serif">to launch</span></h2>
+                <p class="section-description">
+                    Available for freelance engagements, fractional leadership, and advisory — typically 3–6 months with option to extend.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <p class="service-number">01</p>
+                    <h3>Fractional CPO / Product Leadership</h3>
+                    <p>
+                        Step in as your interim product leader. Define vision, build process, align stakeholders, and set your team up to deliver outcomes — not just features.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <p class="service-number">02</p>
+                    <h3>0→1 Product Strategy</h3>
+                    <p>
+                        Shape the idea into a viable product. Market landscape, user research, positioning, roadmap, and a clear path to your first meaningful release.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <p class="service-number">03</p>
+                    <h3>MVP Definition & Discovery</h3>
+                    <p>
+                        Run lean discovery sprints, define the smallest valuable product, and architect a build plan that balances speed with learning.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <p class="service-number">04</p>
+                    <h3>AI Product Strategy</h3>
+                    <p>
+                        Navigate the AI product landscape with clarity. From identifying high-leverage use cases to prototyping AI-powered features and setting a pragmatic integration roadmap.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <p class="service-number">05</p>
+                    <h3>Team & Operating Model Setup</h3>
+                    <p>
+                        Build the right team structure, rituals, and decision frameworks. Hire well, create momentum, and establish a culture of ownership and speed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SELECTED WORK
+         ============================================ -->
+    <section id="work">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Selected Work</p>
+                <h2>Ventures I've <span class="serif">shaped</span></h2>
+            </div>
+            <div class="work-grid">
+                <div class="work-card fade-in">
+                    <p class="work-card-label">AI · Fintech · Impact</p>
+                    <h3>Musa</h3>
+                    <p class="work-card-role">Fractional CPO</p>
+                    <p>
+                        AI-powered venture health platform connecting underrepresented entrepreneurs with financing in frontier markets. Launched alpha in 8 weeks. Led product from concept to release, including AI-driven venture scoring and funding recommendations.
+                    </p>
+                    <div class="work-card-tags">
+                        <span class="tag">0→1</span>
+                        <span class="tag">AI Integration</span>
+                        <span class="tag">Team Building</span>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
+                    <p class="work-card-label">Sustainability · Data · SaaS</p>
+                    <h3>OpenSC</h3>
+                    <p class="work-card-role">Head of Product</p>
+                    <p>
+                        Supply chain sustainability verification using real-time data and AI. Built the company's first formal product methodology, drove LATAM market expansion across 4 countries, and defined the technical strategy for their verification engine.
+                    </p>
+                    <div class="work-card-tags">
+                        <span class="tag">Product Methodology</span>
+                        <span class="tag">Market Expansion</span>
+                        <span class="tag">Data Pipeline</span>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
+                    <p class="work-card-label">Marketplace · E-Commerce</p>
+                    <h3>Velio</h3>
+                    <p class="work-card-role">CPO</p>
+                    <p>
+                        Refurbished e-bike marketplace built on trust and sustainability. Scaled from €0 to €500k+ monthly revenue in 6 months. Achieved &gt;4% conversion rate through strong UX and transparency-first design.
+                    </p>
+                    <div class="work-card-tags">
+                        <span class="tag">€0→€500k MRR</span>
+                        <span class="tag">Platform Build</span>
+                        <span class="tag">UX Strategy</span>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
+                    <p class="work-card-label">Mental Health · AI · BCG DV</p>
+                    <h3>Tilda</h3>
+                    <p class="work-card-role">Lead Product Manager</p>
+                    <p>
+                        Mental health platform built at BCG Digital Ventures. One of 10+ ventures I helped shape from inception — spanning medtech, mobility, construction SaaS, and AI across 4 continents.
+                    </p>
+                    <div class="work-card-tags">
+                        <span class="tag">Mental Health</span>
+                        <span class="tag">BCG DV</span>
+                        <span class="tag">MVP Launch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SOUND & MUSIC
+         ============================================ -->
+    <section class="sound" id="sound">
+        <div class="container">
+            <div class="sound-content fade-in">
+                <div>
+                    <p class="section-label" style="color: var(--color-accent);">Beyond Product</p>
+                    <h2>Sound &amp; <span class="serif">creative expression</span></h2>
+                    <div class="sound-text">
+                        <p>
+                            Building products is how I create in the professional world. Sound is how I create in the personal one. I play the handpan, explore ambient music production, and use sound as a practice of presence and expression.
+                        </p>
+                        <p>
+                            It's not separate from the work — the same qualities that make a good product (listening, intention, rhythm, space) are the ones that make good music.
+                        </p>
+                    </div>
+                </div>
+                <div class="sound-visual">
+                    <div class="sound-item">
+                        <h4>Handpan</h4>
+                        <p>Melodic percussion — live and exploratory</p>
+                    </div>
+                    <div class="sound-item">
+                        <h4>Music Production</h4>
+                        <p>Ambient, electronic, and organic textures</p>
+                    </div>
+                    <div class="sound-item">
+                        <h4>Sound as Practice</h4>
+                        <p>Presence, atmosphere, creative exploration</p>
+                    </div>
+                    <!-- PLACEHOLDER: Add links to SoundCloud, Bandcamp, or audio samples here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         HOW I WORK
+         ============================================ -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header fade-in" style="text-align: center;">
+                <p class="section-label">How I Work</p>
+                <h2>Clarity, speed, <span class="serif">craft</span></h2>
+            </div>
+            <div class="process-grid fade-in">
+                <div class="process-step">
+                    <p class="process-step-number">01</p>
+                    <h4>Understand</h4>
+                    <p>Deep-dive into the problem space, users, and business context.</p>
+                </div>
+                <div class="process-step">
+                    <p class="process-step-number">02</p>
+                    <h4>Define</h4>
+                    <p>Shape the strategy, set clear priorities, and align stakeholders.</p>
+                </div>
+                <div class="process-step">
+                    <p class="process-step-number">03</p>
+                    <h4>Build</h4>
+                    <p>Ship fast with lean teams. Iterate based on real signals, not assumptions.</p>
+                </div>
+                <div class="process-step">
+                    <p class="process-step-number">04</p>
+                    <h4>Scale</h4>
+                    <p>Set up systems, teams, and processes that carry momentum forward.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA / CONTACT
+         ============================================ -->
+    <section class="cta" id="contact">
+        <div class="container fade-in">
+            <p class="section-label">Get in Touch</p>
+            <h2>Let's build something<br><span class="serif">that matters</span></h2>
+            <p class="cta-subtitle">
+                Open for freelance product leadership, fractional CPO engagements, and meaningful collaborations.
+            </p>
+            <div class="cta-buttons">
+                <!-- EDIT: Replace mailto with your actual email -->
+                <a href="mailto:hello@julianweinmann.xyz" class="btn btn-primary btn-arrow">Get in touch</a>
+                <a href="https://www.linkedin.com/in/julian-weinmann-b1762a86/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2026 Julian Weinmann. Berlin.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/julian-weinmann-b1762a86/" target="_blank" rel="noopener">LinkedIn</a>
+                <!-- PLACEHOLDER: Add links when ready -->
+                <!-- <a href="#">Writing</a> -->
+                <!-- <a href="#">Music</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll for nav links & close mobile menu
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
