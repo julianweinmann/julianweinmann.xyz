@@ -351,6 +351,26 @@
             align-items: start;
         }
 
+        .about-photo {
+            width: 100%;
+            max-width: 320px;
+            border-radius: var(--border-radius);
+            margin-bottom: var(--space-md);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .sound-photo {
+            width: 100%;
+            border-radius: var(--border-radius);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: var(--space-md);
+            opacity: 0.9;
+        }
+
         .about-label {
             font-size: 0.8125rem;
             text-transform: uppercase;
@@ -862,6 +882,8 @@
                 <span class="credibility-divider"></span>
                 <span class="credibility-item">Rocket Internet</span>
                 <span class="credibility-divider"></span>
+                <span class="credibility-item">Kleinanzeigen</span>
+                <span class="credibility-divider"></span>
                 <span class="credibility-item">10+ Ventures Built</span>
                 <span class="credibility-divider"></span>
                 <span class="credibility-item">4 Continents</span>
@@ -878,6 +900,7 @@
         <div class="container">
             <div class="about-grid fade-in">
                 <div>
+                    <img src="julian-about.jpg" alt="Julian Weinmann" class="about-photo" loading="lazy">
                     <p class="about-label">About</p>
                     <h2>Strategy meets<br><span class="serif">execution</span></h2>
                     <div class="about-text">
@@ -979,6 +1002,19 @@
             </div>
             <div class="work-grid">
                 <div class="work-card fade-in">
+                    <p class="work-card-label">Marketplace · Structured Data · AI Foundations</p>
+                    <h3>Kleinanzeigen</h3>
+                    <p class="work-card-role">Product Lead, Category Specialization</p>
+                    <p>
+                        Built and shaped a new category-focused product initiative in Electronics — one of the platform's key verticals. Led strategy, discovery, and cross-functional alignment to define the roadmap for structured data, smarter filters, and guided listing experiences. Laid the foundation for AI-ready marketplace capabilities.
+                    </p>
+                    <div class="work-card-tags">
+                        <span class="tag">Marketplace</span>
+                        <span class="tag">Structured Data</span>
+                        <span class="tag">Category Strategy</span>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
                     <p class="work-card-label">AI · Fintech · Impact</p>
                     <h3>Musa</h3>
                     <p class="work-card-role">Fractional CPO</p>
@@ -1053,6 +1089,7 @@
                     </div>
                 </div>
                 <div class="sound-visual">
+                    <img src="julian-sound.jpg" alt="Julian Weinmann — Sound & Music" class="sound-photo" loading="lazy">
                     <div class="sound-item">
                         <h4>Handpan</h4>
                         <p>Melodic percussion — live and exploratory</p>
@@ -1117,7 +1154,7 @@
             </p>
             <div class="cta-buttons">
                 <!-- EDIT: Replace mailto with your actual email -->
-                <a href="mailto:hello@julianweinmann.xyz" class="btn btn-primary btn-arrow">Get in touch</a>
+                <a href="mailto:julian.weinmann@gmail.com" class="btn btn-primary btn-arrow">Get in touch</a>
                 <a href="https://www.linkedin.com/in/julian-weinmann-b1762a86/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
             </div>
         </div>
