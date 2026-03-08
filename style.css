@@ -517,11 +517,13 @@ nav .container {
 }
 
 .work-card-logo {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-md);
+    height: 28px;
+    width: auto;
+    max-width: 80px;
     object-fit: contain;
-    flex-shrink: 0;
 }
 
 .work-card-label {
