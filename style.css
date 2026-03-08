@@ -203,8 +203,30 @@ nav .container {
     padding-bottom: var(--space-xl);
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
 .hero-content {
     max-width: 860px;
+}
+
+.hero-photo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-photo {
+    width: 280px;
+    height: 340px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    object-position: center 15%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
 .hero-label {
@@ -825,6 +847,20 @@ footer .container {
    RESPONSIVE
    ============================================ */
 @media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .hero-photo-wrapper {
+        order: -1;
+    }
+
+    .hero-photo {
+        width: 200px;
+        height: 240px;
+    }
+
     .about-grid,
     .sound-content {
         grid-template-columns: 1fr;
