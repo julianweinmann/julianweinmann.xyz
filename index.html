@@ -362,10 +362,35 @@
         }
 
         .credibility-item.credibility-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             font-size: 1rem;
             color: var(--color-text-secondary);
             font-weight: 600;
             letter-spacing: 0.04em;
+        }
+
+        .credibility-logo-img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+
+        .work-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .work-card-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            object-fit: contain;
+            flex-shrink: 0;
         }
 
         .credibility-divider {
@@ -533,7 +558,7 @@
 
         .work-card h3 {
             font-size: 1.5rem;
-            margin-bottom: var(--space-xs);
+            margin-bottom: 0;
             font-weight: 400;
         }
 
@@ -959,11 +984,11 @@
     <div class="credibility">
         <div class="container">
             <div class="credibility-items">
-                <span class="credibility-item credibility-logo">BCGX</span>
+                <span class="credibility-item credibility-logo"><img src="https://logo.clearbit.com/bcg.com" alt="BCGX" class="credibility-logo-img" loading="lazy">BCGX</span>
                 <span class="credibility-divider"></span>
-                <span class="credibility-item credibility-logo">Rocket Internet</span>
+                <span class="credibility-item credibility-logo"><img src="https://logo.clearbit.com/rocketinternet.com" alt="Rocket Internet" class="credibility-logo-img" loading="lazy">Rocket Internet</span>
                 <span class="credibility-divider"></span>
-                <span class="credibility-item credibility-logo">Kleinanzeigen</span>
+                <span class="credibility-item credibility-logo"><img src="https://logo.clearbit.com/kleinanzeigen.de" alt="Kleinanzeigen" class="credibility-logo-img" loading="lazy">Kleinanzeigen</span>
                 <span class="credibility-divider"></span>
                 <span class="credibility-item">10+ Ventures Built</span>
                 <span class="credibility-divider"></span>
@@ -1084,7 +1109,10 @@
             <div class="work-grid">
                 <div class="work-card fade-in">
                     <p class="work-card-label">Marketplace · Structured Data · AI Foundations</p>
-                    <h3>Kleinanzeigen</h3>
+                    <div class="work-card-header">
+                        <img src="https://logo.clearbit.com/kleinanzeigen.de" alt="Kleinanzeigen" class="work-card-logo" loading="lazy">
+                        <h3>Kleinanzeigen</h3>
+                    </div>
                     <p class="work-card-role">Product Lead, Category Specialization</p>
                     <p>
                         Built and shaped a new category-focused product initiative in Electronics — one of the platform's key verticals. Led strategy, discovery, and cross-functional alignment to define the roadmap for structured data, smarter filters, and guided listing experiences. Laid the foundation for AI-ready marketplace capabilities.
@@ -1097,7 +1125,10 @@
                 </div>
                 <div class="work-card fade-in">
                     <p class="work-card-label">AI · Fintech · Impact</p>
-                    <h3>Musa</h3>
+                    <div class="work-card-header">
+                        <img src="https://logo.clearbit.com/musaapp.co" alt="Musa" class="work-card-logo" loading="lazy" onerror="this.style.display='none'">
+                        <h3>Musa</h3>
+                    </div>
                     <p class="work-card-role">Fractional CPO</p>
                     <p>
                         AI-powered venture health platform connecting underrepresented entrepreneurs with financing in frontier markets. Launched alpha in 8 weeks. Led product from concept to release, including AI-driven venture scoring and funding recommendations.
@@ -1110,7 +1141,10 @@
                 </div>
                 <div class="work-card fade-in">
                     <p class="work-card-label">Sustainability · Data · SaaS</p>
-                    <h3>OpenSC</h3>
+                    <div class="work-card-header">
+                        <img src="https://logo.clearbit.com/opensc.org" alt="OpenSC" class="work-card-logo" loading="lazy" onerror="this.style.display='none'">
+                        <h3>OpenSC</h3>
+                    </div>
                     <p class="work-card-role">Head of Product</p>
                     <p>
                         Supply chain sustainability verification using real-time data and AI. Built the company's first formal product methodology, drove LATAM market expansion across 4 countries, and defined the technical strategy for their verification engine.
@@ -1123,7 +1157,10 @@
                 </div>
                 <div class="work-card fade-in">
                     <p class="work-card-label">Marketplace · E-Commerce</p>
-                    <h3>Velio</h3>
+                    <div class="work-card-header">
+                        <img src="https://logo.clearbit.com/velio.de" alt="Velio" class="work-card-logo" loading="lazy" onerror="this.style.display='none'">
+                        <h3>Velio</h3>
+                    </div>
                     <p class="work-card-role">CPO</p>
                     <p>
                         Refurbished e-bike marketplace built on trust and sustainability. Scaled from €0 to €500k+ monthly revenue in 6 months. Achieved &gt;4% conversion rate through strong UX and transparency-first design.
@@ -1135,8 +1172,11 @@
                     </div>
                 </div>
                 <div class="work-card fade-in">
-                    <p class="work-card-label">Mental Health · AI · BCG DV</p>
-                    <h3>Tilda</h3>
+                    <p class="work-card-label">Mental Health · AI · BCGX</p>
+                    <div class="work-card-header">
+                        <img src="https://logo.clearbit.com/bcg.com" alt="BCGX" class="work-card-logo" loading="lazy">
+                        <h3>Tilda</h3>
+                    </div>
                     <p class="work-card-role">Lead Product Manager</p>
                     <p>
                         Mental health platform built at BCG Digital Ventures. One of 10+ ventures I helped shape from inception — spanning medtech, mobility, construction SaaS, and AI across 4 continents.
