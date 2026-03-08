@@ -23,7 +23,7 @@
 
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
-    {
+    [{
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Julian Weinmann",
@@ -39,8 +39,37 @@
         "sameAs": [
             "https://www.linkedin.com/in/julian-weinmann-b1762a86/"
         ],
+        "alumniOf": [
+            {"@type": "Organization", "name": "BCG Digital Ventures"},
+            {"@type": "Organization", "name": "Rocket Internet"}
+        ],
         "knowsAbout": ["Product Management", "AI Product Strategy", "Venture Building", "Fractional CPO", "MVP Development", "Product Discovery", "SaaS", "Marketplaces"]
-    }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Julian Weinmann — Product Leadership & Venture Building",
+        "url": "https://julianweinmann.xyz",
+        "image": "https://julianweinmann.xyz/julian-about.jpg",
+        "description": "Fractional CPO, 0→1 product strategy, MVP discovery, and AI product strategy for startups and ventures.",
+        "provider": {
+            "@type": "Person",
+            "name": "Julian Weinmann"
+        },
+        "areaServed": "Worldwide",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Julian Weinmann",
+        "url": "https://julianweinmann.xyz",
+        "description": "Product Leader & Venture Builder. 10+ years building digital products from 0→1."
+    }]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,24 +98,19 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <p class="hero-label">Product Leader &amp; Venture Builder</p>
-                    <h1>
-                        Building products that<br>
-                        <span class="serif">matter</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        I help startups and ventures go from zero to one. 10+ years of building digital products across AI, SaaS, marketplaces, and meaningful technology — with strategic clarity and hands-on execution.
-                    </p>
-                    <div class="hero-cta-group">
-                        <a href="https://www.linkedin.com/in/julian-weinmann-b1762a86/" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">Connect on LinkedIn</a>
-                        <a href="contact.html" class="btn btn-secondary btn-arrow">Work with me</a>
-                        <a href="work.html" class="btn btn-secondary">View selected work</a>
-                    </div>
-                </div>
-                <div class="hero-photo-wrapper">
-                    <img src="julian-about.jpg" alt="Julian Weinmann" class="hero-photo">
+            <div class="hero-content">
+                <p class="hero-label">Product Leader &amp; Venture Builder</p>
+                <h1>
+                    Building products that<br>
+                    <span class="serif">matter</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I help startups and ventures go from zero to one. 10+ years of building digital products across AI, SaaS, marketplaces, and meaningful technology — with strategic clarity and hands-on execution.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="https://www.linkedin.com/in/julian-weinmann-b1762a86/" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">Connect on LinkedIn</a>
+                    <a href="contact.html" class="btn btn-secondary btn-arrow">Work with me</a>
+                    <a href="work.html" class="btn btn-secondary">View selected work</a>
                 </div>
             </div>
         </div>
@@ -96,11 +120,11 @@
     <div class="credibility">
         <div class="container">
             <div class="credibility-items">
-                <span class="credibility-item">BCGX</span>
+                <span class="credibility-item credibility-logo"><img src="logo-bcgx.png" alt="BCGX" class="credibility-logo-img" loading="lazy">BCGX</span>
                 <span class="credibility-divider"></span>
-                <span class="credibility-item">Rocket Internet</span>
+                <span class="credibility-item credibility-logo"><img src="logo-rocket.png" alt="Rocket Internet" class="credibility-logo-img" loading="lazy">Rocket Internet</span>
                 <span class="credibility-divider"></span>
-                <span class="credibility-item">Kleinanzeigen</span>
+                <span class="credibility-item credibility-logo"><img src="logo-kleinanzeigen.png" alt="Kleinanzeigen" class="credibility-logo-img" loading="lazy">Kleinanzeigen</span>
                 <span class="credibility-divider"></span>
                 <span class="credibility-item">10+ Ventures Built</span>
                 <span class="credibility-divider"></span>
@@ -116,6 +140,7 @@
         <div class="container">
             <div class="about-grid fade-in">
                 <div>
+                    <img src="julian-about.jpg" alt="Julian Weinmann" class="about-photo" loading="lazy">
                     <p class="about-label">About</p>
                     <h2>Strategy meets<br><span class="serif">execution</span></h2>
                     <div class="about-text">
