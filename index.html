@@ -559,6 +559,48 @@
         }
 
         /* ============================================
+           TOOLING
+           ============================================ */
+        .tooling {
+            background: var(--color-bg-alt);
+        }
+
+        .tooling-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .tooling-category {
+            padding: var(--space-md);
+        }
+
+        .tooling-category h4 {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .tooling-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tooling-tag {
+            font-size: 0.8125rem;
+            padding: 0.3rem 0.75rem;
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 100px;
+            color: var(--color-text-secondary);
+            white-space: nowrap;
+        }
+
+        /* ============================================
            SOUND & MUSIC
            ============================================ */
         .sound {
@@ -1096,6 +1138,91 @@
                         <span class="tag">Mental Health</span>
                         <span class="tag">BCG DV</span>
                         <span class="tag">MVP Launch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TOOLING & LANGUAGES
+         ============================================ -->
+    <section class="tooling" id="tooling">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-label">Toolkit</p>
+                <h2>Tools &amp; <span class="serif">languages</span></h2>
+            </div>
+            <div class="tooling-grid fade-in">
+                <div class="tooling-category">
+                    <h4>Product & Design</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">Figma</span>
+                        <span class="tooling-tag">Notion</span>
+                        <span class="tooling-tag">Miro</span>
+                        <span class="tooling-tag">Jira</span>
+                        <span class="tooling-tag">Productboard</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>AI & Prototyping</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">ChatGPT</span>
+                        <span class="tooling-tag">Claude Code</span>
+                        <span class="tooling-tag">Cursor AI</span>
+                        <span class="tooling-tag">Lovable</span>
+                        <span class="tooling-tag">Zapier</span>
+                        <span class="tooling-tag">Webflow</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>Analytics</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">GA4</span>
+                        <span class="tooling-tag">Mixpanel</span>
+                        <span class="tooling-tag">Amplitude</span>
+                        <span class="tooling-tag">PostHog</span>
+                        <span class="tooling-tag">Hotjar</span>
+                        <span class="tooling-tag">Segment</span>
+                        <span class="tooling-tag">SEMrush</span>
+                        <span class="tooling-tag">Similarweb</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>Feedback & Engagement</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">Intercom</span>
+                        <span class="tooling-tag">Typeform</span>
+                        <span class="tooling-tag">Optimizely</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>Platforms & Stack</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">Vercel</span>
+                        <span class="tooling-tag">Supabase</span>
+                        <span class="tooling-tag">AWS</span>
+                        <span class="tooling-tag">Contentful</span>
+                        <span class="tooling-tag">HubSpot</span>
+                        <span class="tooling-tag">Retool</span>
+                        <span class="tooling-tag">N8N</span>
+                        <span class="tooling-tag">Stripe</span>
+                        <span class="tooling-tag">Mailjet</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>Collaboration</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">Slack</span>
+                        <span class="tooling-tag">Loom</span>
+                    </div>
+                </div>
+                <div class="tooling-category">
+                    <h4>Languages</h4>
+                    <div class="tooling-tags">
+                        <span class="tooling-tag">German (native)</span>
+                        <span class="tooling-tag">English (native level)</span>
+                        <span class="tooling-tag">Spanish (professional)</span>
                     </div>
                 </div>
             </div>
