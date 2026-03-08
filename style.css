@@ -526,6 +526,10 @@ nav .container {
     object-fit: contain;
 }
 
+.work-card-logo ~ .work-card-label {
+    padding-right: 100px;
+}
+
 .work-card-label {
     font-size: 0.75rem;
     text-transform: uppercase;
