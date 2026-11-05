@@ -544,6 +544,17 @@ nav .container {
     font-weight: 400;
 }
 
+.work-card-link {
+    font-size: 0.8125rem;
+    color: var(--color-accent);
+    border-bottom: 1px solid currentColor;
+    line-height: 1.3;
+}
+
+.work-card-link:hover {
+    color: var(--color-accent-hover);
+}
+
 .work-card-role {
     font-size: 0.875rem;
     color: var(--color-accent);
